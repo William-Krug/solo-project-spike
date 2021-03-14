@@ -20,6 +20,7 @@ const array1 = [
 
 const array2 = [
   {
+    id: 45,
     user_id: 1,
     date: '01/05/2020',
     route: 'Secret Path',
@@ -30,6 +31,7 @@ const array2 = [
     notes: '',
   },
   {
+    id: 76,
     user_id: 1,
     date: '01/06/2020',
     route: 'Treadmill',
@@ -40,6 +42,7 @@ const array2 = [
     notes: 'I hate the dreadmill',
   },
   {
+    id: 188,
     user_id: 1,
     date: '01/08/2020',
     route: 'Treadmill',
@@ -50,6 +53,7 @@ const array2 = [
     notes: '',
   },
   {
+    id: 9000,
     user_id: 1,
     date: '01/10/2020',
     route: 'Treadmill',
@@ -60,6 +64,7 @@ const array2 = [
     notes: '',
   },
   {
+    id: 877653,
     user_id: 1,
     date: '01/12/2020',
     route: 'Bonduel 4',
@@ -74,6 +79,18 @@ const array2 = [
 function* rootSaga() {
   yield takeEvery('FETCH_USER_STATES', fetchUserStates);
   yield takeEvery('FETCH_COMMUNITY_RUNS', fetchCommunityRuns);
+  yield takeEvery('GET_SINGLE_RUN', getSingleRun);
+  yield takeEvery('FETCH_RUN_DETAILS', fetchRunDetails);
+}
+
+function* fetchRunDetails(action) {
+  console.log('*** saga -> in fetchRunDetails() ***');
+  console.log('\taction.payload:', action.payload);
+}
+
+function* getSingleRun(action) {
+  console.log('*** saga -> in getSingleRun() ***');
+  console.log('\taction.payload:', action.payload);
 }
 
 function* fetchCommunityRuns(action) {

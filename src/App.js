@@ -1,10 +1,7 @@
 import './App.css';
 
-// import React, { useEffect, useState } from 'react';
 import { /*useDispatch,*/ useSelector } from 'react-redux';
 import React from 'react';
-// import { Pie } from 'react-chartjs-2';
-// import { Scatter } from 'react-chartjs-2';
 
 import PieChart from './PieChart';
 import LineTest from './LineTest';

@@ -1,9 +1,25 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Line } from 'react-chartjs-2';
 
 function LineTest() {
+  const dispatch = useDispatch();
+
   const communityRuns = useSelector((store) => store.communityRuns);
+
+  const getElementAtEvent = (element) => {
+    console.log('*** in getElementAtEvent() ***');
+    console.log('element:', element);
+
+    console.log(communityRuns[element[0]._index].id);
+
+    dispatch({
+      type: 'GET_SINGLE_RUN',
+      payload: {
+        id: communityRuns[element[0]._index].id,
+      },
+    });
+  };
 
   const data = {
     labels: [
@@ -32,6 +48,8 @@ function LineTest() {
   };
 
   const options = {
+    tooltips: { enabled: false },
+    hover: { mode: null },
     scales: {
       xAxes: [
         {
@@ -64,7 +82,11 @@ function LineTest() {
       <div className="header">
         <h1 className="title">Line Test</h1>
       </div>
-      <Line data={data} options={options} />
+      <Line
+        data={data}
+        options={options}
+        getElementAtEvent={getElementAtEvent}
+      />
     </>
   );
 }
