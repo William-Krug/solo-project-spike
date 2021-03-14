@@ -7,7 +7,6 @@ import React from 'react';
 // import { Scatter } from 'react-chartjs-2';
 
 import PieChart from './PieChart';
-import ScatterPlot from './ScatterPlot';
 import LineTest from './LineTest';
 
 function App() {
@@ -23,6 +22,12 @@ function App() {
         <h1>ADMIN PORTAL</h1>
 
         <PieChart />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
         <h2>All Community Runs</h2>
         <table>
@@ -58,11 +63,14 @@ function App() {
           </tbody>
         </table>
 
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <LineTest />
 
-        <ScatterPlot />
-        <br />
-        <br />
         <br />
         <br />
         <br />

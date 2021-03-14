@@ -20,12 +20,7 @@ function PieChart() {
           userStates[2].count,
           userStates[3].count,
         ],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-        ],
+        backgroundColor: ['#ed2939', '#002395', '#fdc651', '#00a86b'],
       },
     ],
   };

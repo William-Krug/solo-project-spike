@@ -15,7 +15,7 @@ function LineTest() {
     ],
     datasets: [
       {
-        label: 'Run History',
+        label: 'Distance',
         data: [
           communityRuns[0].distance,
           communityRuns[1].distance,
@@ -24,24 +24,38 @@ function LineTest() {
           communityRuns[4].distance,
         ],
         fill: false,
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgba(255, 99, 132, 0.2)',
+        backgroundColor: '#ed2939',
+        borderColor: '#ed2939',
+        showLine: false,
       },
     ],
   };
 
   const options = {
     scales: {
-      yAxes: [
+      xAxes: [
         {
           ticks: {
-            beginAtZero: true,
+            padding: 10,
+          },
+          gridLines: {
+            drawOnChartArea: false,
+            drawTicks: false,
           },
         },
       ],
-    },
-    datasets: {
-      lineTension: '',
+      yAxes: [
+        {
+          ticks: {
+            padding: 10,
+            beginAtZero: true,
+          },
+          gridLines: {
+            drawOnChartArea: false,
+            drawTicks: false,
+          },
+        },
+      ],
     },
   };
 
