@@ -2,6 +2,7 @@ import './App.css';
 
 import { /*useDispatch,*/ useSelector } from 'react-redux';
 import React from 'react';
+import swal from 'sweetalert';
 
 import PieChart from './PieChart';
 import LineTest from './LineTest';
@@ -11,6 +12,7 @@ function App() {
 
   function deleteRun(runId) {
     console.log('*** in deleteRun ***');
+    swal('*** in deleteRun() ***', 'Delete button clicked', 'success');
   }
 
   return (
